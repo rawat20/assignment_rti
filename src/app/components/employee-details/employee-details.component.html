@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col headers">
+            <span class="p-4">Employee Details</span>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" *ngIf="allEmployees.length == 0">
+  <div class="row noDataFound">
+    <div class="row">
+      
+
+      <div class="col-12 text-center">
+        <img src="assets/img/noDataFound.PNG" alt="loader" />
+      </div>
+       
+    </div>
+    
+  </div>
+  
+</div>
+<div class="container-fluid" *ngIf="allEmployees.length > 0">
+  <div class="row">
+    <div class="col-12 headersList">
+        <span class="p-4">Current Employees</span>
+    </div>
+  </div>
+  <div class="row" *ngFor="let item of currentEmployee()">
+    <div class="card">
+      <div class="card-body" >
+      <h5 class="card-title">{{item.name}}</h5>
+      <h6 class="card-subtitle subHeading mb-2"><span *ngIf="item.Designation === 'PD'">Product Designer</span>
+        <span *ngIf="item.Designation === 'FD'">Flutter Developer</span>
+        <span *ngIf="item.Designation === 'QA'">QA Tester</span>
+        <span *ngIf="item.Designation === 'PO'">Product Owner</span>
+      </h6>
+      <h6 class="card-subtitle subHeading2 mb-2">From {{item.todayDate?.day}} {{getMonthName(item.todayDate?.month)}}, {{item.todayDate?.year}}</h6>
+      </div>
+      <div class="edit" [routerLink]="['/editemployeeDetails/',item?.keyName]">
+        <i class="fa fa-solid fa-edit"></i>
+        <!-- <i class="fa fa-solid fa-edit"></i> -->
+      </div>
+      <div class="delete" (click)="deleteEmployee(item?.keyName)">
+        <i class="fa fa-solid fa-trash"></i>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col headersList">
+    <span class="p-4">Previous Employees</span>
+</div>
+</div>
+<div class="row" *ngFor="let item of previousEmployee()">
+  <div class="card">
+    <div class="card-body" >
+    <h5 class="card-title">{{item.name}}</h5>
+    <h6 class="card-subtitle subHeading mb-2"><span *ngIf="item.Designation === 'PD'">Product Designer</span>
+      <span *ngIf="item.Designation === 'FD'">Flutter Developer</span>
+      <span *ngIf="item.Designation === 'QA'">QA Tester</span>
+      <span *ngIf="item.Designation === 'PO'">Product Owner</span>
+    </h6>
+    <h6 class="card-subtitle subHeading2 mb-2">{{item.todayDate?.day}} {{getMonthName(item.todayDate?.month)}}, {{item.todayDate?.year}} - {{item.noDate?.day}} {{getMonthName(item.noDate?.month)}}, {{item.noDate?.year}}</h6>
+    </div>
+    <div class="delete" (click)="deletePermanent(item?.keyName)">
+      <i class="fa fa-solid fa-trash"></i>
+    </div>
+  </div>
+</div>
+</div>
+<span class="addBtn">
+  <button type="button" class="btn btn-lg btn-primary" routerLink="/addemployeeDetails"><i class="fa fa-regular fa-plus"></i></button>
+</span>
+<router-outlet></router-outlet>

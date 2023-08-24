@@ -1,0 +1,67 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col headers">
+            <span class="p-4">Edit Employee</span>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <form [formGroup]="employeeForm">
+    <div class="row mt-4">
+        <div class="col-12 form-group">
+            <!-- <label class="form-label">Employee Name</label> -->
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><img src="assets/img/person_FILL0_wght300_GRAD0_opsz24 (2) 1.svg" alt="loader" /></span>
+                <input type="text" class="form-control" placeholder="Employee Name"formControlName="name" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="col-12 form-group mt-3">
+            <!-- <label class="form-label">Employee Name</label> -->
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon2"><img src="assets/img/work_FILL0_wght300_GRAD0_opsz24 1.svg" alt="loader" /></span>
+                <select class="form-select" formControlName="Designation" aria-describedby="basic-addon2" onchange="this.className='form-select'">
+                    <option selected disabled hidden class="selectDefault">Select role</option>
+                    <option value="PD">Product Designer</option>
+                    <option value="FD">Flutter Developer</option>
+                    <option value="QA">QA Tester</option>
+                    <option value="PO">Product Owner</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-5 form-group mt-3">
+            <div class="form-group">
+                <div id="inv-datepicker" class="input-group date" data-date-format="dd-mmm-yyyy">
+                    <span class="input-group-addon input-group-text bg-primary-transparent"><img src="assets/img/event_FILL0_wght300_GRAD0_opsz24 (1) 1.svg" alt="loader" /></span>
+                    <input (click)="d3.toggle()" placeholder="Today" class="form-control"
+                        formControlName="todayDate" autocomplete="off" name="d3" ngbDatepicker
+                        #d3="ngbDatepicker">
+                </div>
+            </div>
+        </div>
+        <div class="col-2 form-group dateSeparator mt-3">
+            <span><img src="assets/img/arrow_right_alt_FILL0_wght500_GRAD0_opsz24 14.svg" width="28" alt="loader" /></span>
+        </div>
+        <div class="col-5 form-group mt-3">
+            <div class="form-group">
+                <div id="inv-datepicker" class="input-group date" data-date-format="dd-mm-yyyy">
+                    <span class="input-group-addon input-group-text bg-primary-transparent"><img src="assets/img/event_FILL0_wght300_GRAD0_opsz24 (1) 1.svg" alt="loader" /></span>
+                    <input (click)="d4.toggle()" placeholder="No date" class="form-control"
+                        formControlName="noDate" autocomplete="off" name="d4" ngbDatepicker
+                        #d4="ngbDatepicker">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12 mt-2 separator">
+            <div>
+                <button type="button" class="btn btn-primary-light mx-3" routerLink="/employeeDetails">Cancel</button>
+            </div>
+          <div>
+            <button type="button" class="btn btn-primary" *ngIf="!employeeForm.valid" disabled>Save</button>
+            <button type="button" class="btn btn-primary" *ngIf="employeeForm.valid" (click)="submit()">Update</button>
+          </div>
+        </div>
+    </div>
+    </form>
+</div>

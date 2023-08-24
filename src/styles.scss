@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: "Roboto", sans-serif;
+}
+.bg-primary,
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active {
+    background: #1da1f2 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.ngb-dp-weekday{
+    color: #1da1f2 !important
+}
+.btn-primary-light,.btn-primary-light:hover,.btn-primary-light:focus {
+    background: #edf8ff !important;
+    color: #1da1f2 !important;
+    border: none !important;
+}
+
+.headers {
+    background: #1da1f2 !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.8rem;
+    font-weight: 500;
+}
+.headersList {
+    background: #F2F2F2 !important;
+    color: #1da1f2 !important;
+    border: none !important;
+    padding: 0.5rem 0.7rem;
+    font-weight: 500;
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: #dee2e6 !important;
+    box-shadow: none !important;
+}
+
+.form-select {
+    --bs-form-select-bg-img: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%231DA1F2' stroke-a='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !important;
+    cursor: pointer;
+}
+
+input,
+select {
+    border-left: none !important;
+}
+
+.input-group-text {
+    background: transparent;
+    border-right: none !important;
+}
+
+.selectDefault {
+    font-weight: 300 !important;
+}
+
+:placeholder-shown {
+    font-weight: 300 !important;
+}
+
+.dateSeparator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator{
+    display: flex;
+    justify-content: end;
+}
+
+
+.card{
+    border-radius: 0 !important;
+}
+
+.card-body{
+    padding: 0.5rem 1.4rem 0;
+}
+
+.subHeading{
+    color: #949C9E;
+    font-weight: 400;
+    font-size: 14px !important;
+}
+
+.subHeading2{
+    color: #949C9E;
+    font-size: 12px !important;
+    font-weight: 400;
+}
+.card-title{
+    margin-bottom: 0.3rem !important;
+}

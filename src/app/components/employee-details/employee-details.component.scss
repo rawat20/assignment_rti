@@ -1,0 +1,38 @@
+.noDataFound {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 50px);
+    background-color: #F2F2F2;
+    align-items: center;
+  }
+
+  .addBtn{
+    bottom: 1rem;
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    text-align: right;
+    right: 1rem;
+  }
+
+  .delete{
+    position: absolute;
+    right: 0;
+    padding: 1.6rem;
+    background: red;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .edit{
+    position: absolute;
+    right: 4rem;
+    padding: 1.6rem;
+    background: #F2F2F2;
+    color: white;
+    cursor: pointer;
+  }
+
+  .fa-edit{
+    color: #1da1f2 !important;
+  }
