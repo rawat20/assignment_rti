@@ -23,7 +23,7 @@ import { NgbDateCustomParserFormatter } from './services/ngb-date-format.service
     NgbModule,
     ReactiveFormsModule
   ],
-  providers: [{ provide: NgbDateParserFormatter, useClass: NgbDateCustomParserFormatter }
+  providers: [{ provide: NgbDateParserFormatter, useClass: NgbDateCustomParserFormatter },
   ],
   bootstrap: [AppComponent]
 })
