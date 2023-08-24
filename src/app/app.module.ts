@@ -9,7 +9,7 @@ import { AddEmployeeDetailsComponent } from './components/add-employee-details/a
 import { EditEmployeeDetailsComponent } from './components/edit-employee-details/edit-employee-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbDateCustomParserFormatter } from './services/ngb-date-format.service';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +24,7 @@ import { NgbDateCustomParserFormatter } from './services/ngb-date-format.service
     ReactiveFormsModule
   ],
   providers: [{ provide: NgbDateParserFormatter, useClass: NgbDateCustomParserFormatter },
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
