@@ -6,7 +6,7 @@ import { EditEmployeeDetailsComponent } from './components/edit-employee-details
 
 const routes: Routes = [
   {
-    path: '',
+    path: '/',
     redirectTo: '/employeeDetails',
     pathMatch: 'full'
   },
