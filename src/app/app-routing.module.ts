@@ -7,11 +7,11 @@ import { EditEmployeeDetailsComponent } from './components/edit-employee-details
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/employeeDetails',
+    redirectTo: 'employeeDetails',
     pathMatch: 'full'
   },
   {
-    path: '/employeeDetails',
+    path: 'employeeDetails',
     component: EmployeeDetailsComponent,
   },
   {
