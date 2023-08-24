@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "node-size": "node --max_old_space_size=8000"
   },
   "private": true,
   "dependencies": {
